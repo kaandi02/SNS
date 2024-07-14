@@ -167,7 +167,7 @@ export class AppComponent {
       "ceaseDate" : this.ceaseDate,
       "code" : "endUser.line.ceased",
       "message" : "The end user is ceasing their line. This will cease their current service."
-    },null,'\t')
+    },null,'\n')
 
     this.Cease_Voice_Warning = JSON.stringify({
       "id" : "ac2d1c58-c21f-4348-9dde-94f0e2ce10ea",
@@ -182,7 +182,7 @@ export class AppComponent {
       "ceaseDate" : this.ceaseDate,
       "code" : "endUser.serviceCeased.unknownReason",
       "message" : "The end user's service is being ceased. The cease order can be cancelled at the end user's request"
-    });
+    }, null, '\n');
 
     this.Cease_Voice_Completed = JSON.stringify({
       "id" : "ae19c8ee-db3f-427a-abf1-ab4bb5e8f289",
@@ -197,7 +197,7 @@ export class AppComponent {
       "ceaseDate" : this.ceaseDate,
       "code" : "endUser.line.ceased",
       "message" : "The end user is ceasing their line. This will cease their current service."
-    })
+    }, null, '\n');
   }
 
   onSubmit(){
