@@ -30,10 +30,11 @@ export class AppComponent {
   show_json = false;
 
   CurrDate = new Date();
-  todayDate = this.CurrDate.getUTCFullYear()+"-0"+this.CurrDate.getUTCMonth()+"-"+this.CurrDate.getDate()
-  generatedAt = this.CurrDate.getUTCFullYear()+"-0"+this.CurrDate.getUTCMonth()+"-"+this.CurrDate.getDate()+"T10:40:22.755488303+01:00";
-  activationDate = this.CurrDate.getUTCFullYear()+"-0"+this.CurrDate.getUTCMonth()+"-"+this.CurrDate.getDate()+"T11:01:55+01:00";
-  ceaseDate = this.CurrDate.getUTCFullYear()+"-0"+this.CurrDate.getUTCMonth()+"-"+this.CurrDate.getDate()+"T14:37:21Z";
+  month = this.CurrDate.getMonth()+1;
+  todayDate = this.CurrDate.getUTCFullYear()+"-0"+this.month+"-"+this.CurrDate.getDate();
+  generatedAt = this.CurrDate.getUTCFullYear()+"-0"+this.month+"-"+this.CurrDate.getDate()+"T10:40:22.755488303+01:00";
+  activationDate = this.CurrDate.getUTCFullYear()+"-0"+this.month+"-"+this.CurrDate.getDate()+"T11:01:55+01:00";
+  ceaseDate = this.CurrDate.getUTCFullYear()+"-0"+this.month+"-"+this.CurrDate.getDate()+"T14:37:21Z";
 
   BOS_Validation='';
   Data_Accepted = '';
