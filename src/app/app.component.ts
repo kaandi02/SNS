@@ -33,9 +33,9 @@ export class AppComponent {
   month = this.CurrDate.getMonth()+1;
   date = "0" + this.CurrDate.getDate();
   todayDate = this.CurrDate.getUTCFullYear()+"-0"+this.month+"-"+this.date.slice(-2);
-  generatedAt = this.CurrDate.getUTCFullYear()+"-0"+this.month+"-"+this.CurrDate.getDate()+"T10:40:22.755488303+01:00";
-  activationDate = this.CurrDate.getUTCFullYear()+"-0"+this.month+"-"+this.CurrDate.getDate()+"T11:01:55+01:00";
-  ceaseDate = this.CurrDate.getUTCFullYear()+"-0"+this.month+"-"+this.CurrDate.getDate()+"T14:37:21Z";
+  generatedAt = this.CurrDate.getUTCFullYear()+"-0"+this.month+"-"+this.date.slice(-2)+"T10:40:22.755488303+01:00";
+  activationDate = this.CurrDate.getUTCFullYear()+"-0"+this.month+"-"+this.date.slice(-2)+"T11:01:55+01:00";
+  ceaseDate = this.CurrDate.getUTCFullYear()+"-0"+this.month+"-"+this.date.slice(-2)+"T14:37:21Z";
 
   BOS_Validation='';
   Data_Accepted = '';
