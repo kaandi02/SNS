@@ -31,7 +31,8 @@ export class AppComponent {
 
   CurrDate = new Date();
   month = this.CurrDate.getMonth()+1;
-  todayDate = this.CurrDate.getUTCFullYear()+"-0"+this.month+"-"+this.CurrDate.getDate();
+  date = "0" + this.CurrDate.getDate();
+  todayDate = this.CurrDate.getUTCFullYear()+"-0"+this.month+"-"+this.date.slice(-2);
   generatedAt = this.CurrDate.getUTCFullYear()+"-0"+this.month+"-"+this.CurrDate.getDate()+"T10:40:22.755488303+01:00";
   activationDate = this.CurrDate.getUTCFullYear()+"-0"+this.month+"-"+this.CurrDate.getDate()+"T11:01:55+01:00";
   ceaseDate = this.CurrDate.getUTCFullYear()+"-0"+this.month+"-"+this.CurrDate.getDate()+"T14:37:21Z";
