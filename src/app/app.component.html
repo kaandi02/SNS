@@ -4,31 +4,31 @@
       <form class="sns-form">
         <mat-form-field>
           <mat-label>Operator Order Id</mat-label>
-          <input matInput placeholder="" name="ooid" value="" [(ngModel)]="formData.ooid" required autocomplete="false">
+          <input matInput placeholder="" name="ooid" value="" [(ngModel)]="formData.ooid" required>
         </mat-form-field>
         <mat-form-field class="example-full-width">
           <mat-label>VOIP Order Id</mat-label>
-          <input [(ngModel)]="formData.void" name="void" matInput placeholder="" value="" required autocomplete="false">
+          <input [(ngModel)]="formData.void" name="void" matInput placeholder="" value="" required>
         </mat-form-field>
         <mat-form-field class="example-full-width">
           <mat-label>Data Order Id</mat-label>
-          <input [(ngModel)]="formData.doid" name="doid" matInput placeholder="" value="" required autocomplete="false">
+          <input [(ngModel)]="formData.doid" name="doid" matInput placeholder="" value="" required>
         </mat-form-field>
         <mat-form-field class="example-full-width">
           <mat-label>VOIP Service Id</mat-label>
-          <input [(ngModel)]="formData.vsid" name="vsid" matInput placeholder="" value="" required autocomplete="false">
+          <input [(ngModel)]="formData.vsid" name="vsid" matInput placeholder="" value="" required>
         </mat-form-field>
         <mat-form-field class="example-full-width">
           <mat-label>Data Service Id</mat-label>
-          <input [(ngModel)]="formData.dsid" name="dsid" matInput placeholder="" value="" required autocomplete="false">
+          <input [(ngModel)]="formData.dsid" name="dsid" matInput placeholder="" value="" required>
         </mat-form-field>
         <mat-form-field class="example-full-width">
           <mat-label>Directory Number</mat-label>
-          <input [(ngModel)]="formData.directory" name="directory" matInput placeholder="" value="" required autocomplete="false">
+          <input [(ngModel)]="formData.directory" name="directory" matInput placeholder="" value="" required>
         </mat-form-field>
         <mat-form-field class="example-full-width">
           <mat-label>Asset Id</mat-label>
-          <input [(ngModel)]="formData.assetId" name="assetId" matInput placeholder="" value="" autocomplete="false">
+          <input [(ngModel)]="formData.assetId" name="assetId" matInput placeholder="" value="">
         </mat-form-field>
         <button (click)="onSubmit()" type="submit" mat-flat-button style="background-color: rgb(21, 144, 221) !important;color:white;">Create SNS JSON</button>
       </form>
