@@ -26,6 +26,10 @@
           <mat-label>Directory Number</mat-label>
           <input [(ngModel)]="formData.directory" name="directory" matInput placeholder="" value="" required autocomplete="false">
         </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <mat-label>Asset Id</mat-label>
+          <input [(ngModel)]="formData.assetId" name="assetId" matInput placeholder="" value="" autocomplete="false">
+        </mat-form-field>
         <button (click)="onSubmit()" type="submit" mat-flat-button style="background-color: rgb(21, 144, 221) !important;color:white;">Create SNS JSON</button>
       </form>
     </div>
@@ -43,6 +47,22 @@
           <pre style="margin-bottom: 2em;">{{ Voice_Accepted  }}</pre>
           <button class="copytoclipboard" (click)="copyToClipboard(Voice_Accepted)" type="submit" color="primary">Copy to Clipboard<svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg></button>
         </mat-tab>
+        <mat-tab label="Sent to Fulfilment">
+          <pre style="margin-bottom: 2em;">{{ Sent_to_FH  }}</pre>
+          <button class="copytoclipboard" (click)="copyToClipboard(Sent_to_FH)" type="submit" color="primary">Copy to Clipboard<svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg></button>
+        </mat-tab>
+        <mat-tab label="Accepted By Fulfilment">
+          <pre style="margin-bottom: 2em;">{{ Accepted_By_FH  }}</pre>
+          <button class="copytoclipboard" (click)="copyToClipboard(Accepted_By_FH)" type="submit" color="primary">Copy to Clipboard<svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg></button>
+        </mat-tab>
+        <mat-tab label="Dispatched">
+          <pre style="margin-bottom: 2em;">{{ Dispatched  }}</pre>
+          <button class="copytoclipboard" (click)="copyToClipboard(Dispatched)" type="submit" color="primary">Copy to Clipboard<svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg></button>
+        </mat-tab>
+        <mat-tab label="Delivered">
+          <pre style="margin-bottom: 2em;">{{ Delivered  }}</pre>
+          <button class="copytoclipboard" (click)="copyToClipboard(Delivered)" type="submit" color="primary">Copy to Clipboard<svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg></button>
+        </mat-tab>
         <mat-tab label="Data Activated">
           <pre style="margin-bottom: 2em;">{{ Data_Activated  }}</pre>
           <button class="copytoclipboard" (click)="copyToClipboard(Data_Activated)" type="submit" color="primary">Copy to Clipboard<svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg></button>
@@ -59,6 +79,10 @@
           <pre style="margin-bottom: 2em;">{{ Voice_Completed  }}</pre>
           <button class="copytoclipboard" (click)="copyToClipboard(Voice_Completed)" type="submit" color="primary">Copy to Clipboard<svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg></button>
         </mat-tab>
+        <mat-tab label="Undelivered">
+          <pre style="margin-bottom: 2em;">{{ UnDelivered  }}</pre>
+          <button class="copytoclipboard" (click)="copyToClipboard(UnDelivered)" type="submit" color="primary">Copy to Clipboard<svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg></button>
+        </mat-tab>
         <mat-tab label="Cease Data Warning">
           <pre style="margin-bottom: 2em;">{{ Cease_Data_Warning  }}</pre>
           <button class="copytoclipboard" (click)="copyToClipboard(Cease_Data_Warning)" type="submit" color="primary">Copy to Clipboard<svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg></button>
@@ -74,6 +98,10 @@
         <mat-tab label="Cease Voice Completed">
           <pre style="margin-bottom: 2em;">{{ Cease_Voice_Completed  }}</pre>
           <button class="copytoclipboard" (click)="copyToClipboard(Cease_Voice_Completed)" type="submit" color="primary">Copy to Clipboard<svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg></button>
+        </mat-tab>
+        <mat-tab label="Return Received">
+          <pre style="margin-bottom: 2em;">{{ Return_received  }}</pre>
+          <button class="copytoclipboard" (click)="copyToClipboard(Return_received)" type="submit" color="primary">Copy to Clipboard<svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg></button>
         </mat-tab>
       </mat-tab-group>
     </div>
