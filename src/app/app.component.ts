@@ -39,7 +39,8 @@ export class AppComponent {
   generatedAt = this.CurrDate.getUTCFullYear()+"-0"+this.month+"-"+this.date.slice(-2)+"T10:40:22.755488303+01:00";
   activationDate = this.CurrDate.getUTCFullYear()+"-0"+this.month+"-"+this.date.slice(-2)+"T11:01:55+01:00";
   ceaseDate = this.CurrDate.getUTCFullYear()+"-0"+this.month+"-"+this.date.slice(-2)+"T14:37:21Z";
-  deliveryDate = this.CurrDate.getUTCFullYear()+"-0"+this.month+"-"+this.date3.slice(-2)+"T11:01:55+01:00"
+  DFSDate = this.CurrDate.getUTCFullYear()+"-0"+this.month+"-"+this.date.slice(-2);
+  deliveryDate = this.CurrDate.getUTCFullYear()+"-0"+this.month+"-"+this.date3.slice(-2);
 
   BOS_Validation='';
   Data_Accepted = '';
@@ -50,6 +51,7 @@ export class AppComponent {
   Voice_Completed = '';
   Sent_to_FH = '';
   Accepted_By_FH = '';
+  Processing_By_FH = '';
   Dispatched = '';
   Delivered = '';
   UnDelivered = '';
@@ -243,9 +245,24 @@ export class AppComponent {
         },
       "effectiveDateTime" : this.activationDate,
       "trackingNotificationsExpected" : false,
-      "expectedDispatchDate" : this.activationDate,
+      "expectedDispatchDate" : this.DFSDate,
       "expectedDeliveryDate" : this.deliveryDate,
-      "stockAvailableDate" : this.activationDate
+      "stockAvailableDate" : this.DFSDate
+    },null,'\n')
+    
+    this.Processing_By_FH = JSON.stringify({
+      "id" : "fb3e7ea5-e889-4aff-ada4-3f355efebd58",
+      "correlationId" : "ID-bos-notification-service-bosd62-0-0-9-1690556292-6477954f8gl692-1690556872354-0-195",
+      "generatedAt" : this.generatedAt,
+      "userId" : "middleware",
+      "type" : "PROCESSING_BY_FULFILMENT_HOUSE",
+      "providerId" : "DFS",
+      "product": {
+            "id": this.formData.assetId
+        },
+       "operatorOrderId" : this.formData.ooid,
+      "effectiveDateTime" : this.activationDate,
+      "trackingNotificationsExpected" : false
     },null,'\n')
 
     this.Dispatched = JSON.stringify({
