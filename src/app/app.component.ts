@@ -35,12 +35,12 @@ export class AppComponent {
   date2 = this.CurrDate.getDate()+2;
   date = "0" + this.CurrDate.getDate();
   date3 = "0" + this.date2;
-  todayDate = this.CurrDate.getUTCFullYear()+"-0"+this.month+"-"+this.date.slice(-2);
-  generatedAt = this.CurrDate.getUTCFullYear()+"-0"+this.month+"-"+this.date.slice(-2)+"T10:40:22.755488303+01:00";
-  activationDate = this.CurrDate.getUTCFullYear()+"-0"+this.month+"-"+this.date.slice(-2)+"T11:01:55+01:00";
-  ceaseDate = this.CurrDate.getUTCFullYear()+"-0"+this.month+"-"+this.date.slice(-2)+"T14:37:21Z";
-  DFSDate = this.CurrDate.getUTCFullYear()+"-0"+this.month+"-"+this.date.slice(-2);
-  deliveryDate = this.CurrDate.getUTCFullYear()+"-0"+this.month+"-"+this.date3.slice(-2);
+  todayDate = this.CurrDate.getUTCFullYear()+"-"+this.month+"-"+this.date.slice(-2);
+  generatedAt = this.CurrDate.getUTCFullYear()+"-"+this.month+"-"+this.date.slice(-2)+"T10:40:22.755488303+01:00";
+  activationDate = this.CurrDate.getUTCFullYear()+"-"+this.month+"-"+this.date.slice(-2)+"T11:01:55+01:00";
+  ceaseDate = this.CurrDate.getUTCFullYear()+"-"+this.month+"-"+this.date.slice(-2)+"T14:37:21Z";
+  DFSDate = this.CurrDate.getUTCFullYear()+"-"+this.month+"-"+this.date.slice(-2);
+  deliveryDate = this.CurrDate.getUTCFullYear()+"-"+this.month+"-"+this.date3.slice(-2);
 
   BOS_Validation='';
   Data_Accepted = '';
